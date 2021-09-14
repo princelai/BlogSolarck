@@ -3,6 +3,7 @@ title: 配置 pip 和 conda
 date: 2017-11-07T11:43:11+08:00
 draft: false
 isCJKLanguage: true
+toc: true
 categories:
 - 编程
 tags:
@@ -13,7 +14,7 @@ tags:
 
 首先需要确认已经安装 Python 环境，建议用于科学计算的朋友下载安装[Anaconda](https://www.anaconda.com/download/)或者[Miniconda](https://conda.io/miniconda.html)。
 
-### 环境变量和启用配置
+## 环境变量和启用配置
 
 安装好后还需要把安装路径添加到系统环境变量
 
@@ -53,11 +54,11 @@ set PATH=%USERPROFILE%\Anaconda3;%USERPROFILE%\Anaconda3\Library\bin;%USERPROFIL
 activate root
 ```
 
-### 更换源
+## 更换源
 
 conda 官方源非常慢，甚至有时候经常无法连接；pip 时快时慢，也是经常无法连接，所以我们把更新源换为国内的，加快更新速度。
 
-#### **pip**
+### **pip**
 
 目前国内常用的 pip 源有[阿里云](http://mirrors.aliyun.com/help/pypi)和豆瓣。
 
@@ -79,7 +80,7 @@ format = columns
 
 Windows 用户编辑%USERPROFILE%\pip\pip.ini，没有就新建一个，内容和 Linux 一样。
 
-#### **conda**
+### **conda**
 
 目前国内常用的 conda 源有[清华](https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/)和[中科大](http://mirrors.ustc.edu.cn/help/anaconda.html)两个
 
@@ -97,9 +98,9 @@ conda config --add channels https://mirrors.ustc.edu.cn/anaconda/pkgs/free/
 conda config --set show_channel_urls yes
 ```
 
-### 更新
+## 更新
 
-#### **conda**
+### **conda**
 
 conda 常用更新命令
 
@@ -123,7 +124,7 @@ conda config --get channels     #获取当前使用的源，配合下面的命�
 conda config --remove channels https://XXX
 ```
 
-#### **pip**
+### **pip**
 
 pip 常用更新命令
 

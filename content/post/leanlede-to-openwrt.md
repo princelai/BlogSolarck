@@ -1,9 +1,16 @@
-Title: 从lean大神的LEDE系统刷回原版Openwrt
-Date: 2019-10-02 22:45
-Category: 玩电脑
-Tags: openwrt, lede
-Slug: leanlede-to-openwrt
-Authors: Kevin Chen
+---
+title: 从lean大神的LEDE系统刷回原版Openwrt
+date: 2019-10-02T22:45:11+08:00
+draft: false
+isCJKLanguage: true
+toc: false
+categories:
+- 电脑与网络
+tags:
+- openwrt
+- lede
+---
+
 
 <br />
 

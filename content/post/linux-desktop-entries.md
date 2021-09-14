@@ -1,9 +1,15 @@
-Title: 自定义 Linux 桌面启动程序
-Date: 2017-11-17 15:58
-Category: 玩电脑
-Tags: linux
-Slug: linux-desktop-entries
-Authors: Kevin Chen
+---
+title: 自定义 Linux 桌面启动程序
+date: 2017-11-17T15:58:11+08:00
+draft: false
+isCJKLanguage: true
+toc: false
+categories:
+- 电脑与网络
+tags:
+- linux
+---
+
 
 Anaconda 自带的 Spyder 是一个我最喜欢使用的 IDE，对于科学计算有很好的支持，但是在 Linux 上它并没有自带.desktop 文件，所以并不能在程序列表里找到，每次都要手动在命令行执行才能开启，非常不方便，所以决定自己搜索下方法，自己给它添加一个桌面快捷方式。
 

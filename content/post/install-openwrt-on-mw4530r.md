@@ -1,9 +1,14 @@
-Title: 水星（Mercury）MW4530r 刷 Openwrt
-Date: 2014-01-02 01:08
-Category: 玩电脑
-Tags: openwrt
-Slug: install-openwrt-on-mw4530r
-Authors: Kevin Chen
+---
+title: 水星（Mercury）MW4530r 刷 Openwrt
+date: 2014-01-02T01:08:11+08:00
+draft: false
+isCJKLanguage: true
+toc: false
+categories:
+- 电脑与网络
+tags:
+- openwrt
+---
 
 经过两天的不屑折腾，终于为我的 Mw4530r 安装上了 Openwrt。从最后安装成功往回看，其实整个过程非常简单，但是由于是第一次接触，走了不少弯路，本应该一个小时就完成的工作，却整整花了我两天时间。再次发篇文章庆祝下，也给其他朋友一些参考。
 

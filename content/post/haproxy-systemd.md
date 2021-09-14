@@ -1,9 +1,16 @@
-Title: 解决 Haproxy 用 Systemd 启动失败的问题
-Date: 2018-07-13 12:35
-Category: 玩电脑
-Tags: haproxy, systemd
-Slug: systemd-wait-network-online
-Authors: Kevin Chen
+---
+title: 解决Haproxy用Systemd启动失败的问题
+date: 2018-07-13T12:35:11+08:00
+draft: false
+isCJKLanguage: true
+toc: true
+categories:
+- 电脑与网络
+tags:
+- haproxy
+- systemd
+---
+
 
 # 问题描述
 

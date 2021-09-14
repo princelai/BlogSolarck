@@ -1,9 +1,16 @@
-Title: matplotlib 中文字体配置
-Date: 2017-12-18 16:01
-Category: 玩电脑
-Tags: python,matplotlib
-Slug: matplotlib-chinese-fonts
-Authors: Kevin Chen
+---
+title: matplotlib中文字体配置
+date: 2017-12-18T16:01:11+08:00
+draft: false
+isCJKLanguage: true
+toc: false
+categories:
+- 编程
+tags:
+- python
+- matplotlib
+---
+
 
 matplotlib 是 Python 的优秀绘图包，但是不论是在 Windows 还是 Linux 中默认都是不支持中文的，尤其是在 Linux 中设置更加复杂一点，设置方法如下：
 

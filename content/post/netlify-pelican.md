@@ -1,9 +1,15 @@
-Title: Netlify全自动部署静态博客
-Date: 2018-11-20 14:08
-Category: 玩电脑
-Tags: netligy, pelican
-Slug: using-netlify-auto-deployed-pelican
-Authors: Kevin Chen
+---
+title: Netlify全自动部署静态博客
+date: 2018-11-20T14:08:11+08:00
+draft: false
+isCJKLanguage: true
+toc: false
+categories:
+- 电脑与网络
+tags:
+- netlify
+- pelican
+---
 
 
 

@@ -1,10 +1,15 @@
-Title:多Shadowsocks服务器负载均衡
-Date: 2018-12-05 15:35
-Category: 玩电脑
-Tags:shadowsocks,haproxy
-Slug:haproxy-shadowsocks-balance
-Authors: Kevin Chen
-
+---
+title: 多Shadowsocks服务器负载均衡
+date: 2018-12-05T15:35:11+08:00
+draft: false
+isCJKLanguage: true
+toc: true
+categories:
+- 电脑与网络
+tags:
+- shadowsocks
+- haproxy
+---
 
 
 玩翻墙主机的人哪个没有好几个小鸡，所以多主机负载均衡访问这个需求应运而生，开源软件界当然已经有可以解决这个问题的软件——Haproxy

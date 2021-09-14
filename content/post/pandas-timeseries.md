@@ -1,9 +1,16 @@
-Title:Pandas 时间处理函数速度对比
-Date: 2018-06-08 10:36
-Category: 金融与算法
-Tags: python, pandas
-Slug: pandas-timeseries
-Authors: Kevin Chen
+---
+title: Pandas时间处理函数速度对比
+date: 2018-06-08T10:36:11+08:00
+draft: false
+isCJKLanguage: true
+toc: false
+categories:
+- 编程
+tags:
+- python
+- pandas
+---
+
 
 Pandas 非常擅长处理时间序列，拥有多种处理时间序列的函数和方法，自己做了几个小测试，看看内置函数都能适配哪种格式、哪种情况，速度又有多快。
 

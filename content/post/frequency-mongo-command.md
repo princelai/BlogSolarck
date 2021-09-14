@@ -3,8 +3,9 @@ title: Mongo常用命令记录
 date: 2018-12-06T11:53:11+08:00
 draft: false
 isCJKLanguage: true
+toc: false
 categories:
-- 计算机
+- 编程
 tags:
 - mongo
 ---
@@ -65,7 +66,7 @@ mongoimport -d db_mongo -c news --upsert -j 2 news.json
 
 ## 去重
 
-#### 方法一
+### 方法一
 
 1. 首先查看计数并删除集合
 
@@ -99,7 +100,7 @@ mongoimport -d db_mongo -c news --upsert -j 2 news.json
    > 12552
 
 
-#### 方法二
+### 方法二
 
 这个方法是从网上看到的，同样能得到预期的结果，具体的解释可以从参考链接跳转过去看
 

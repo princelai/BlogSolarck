@@ -1,11 +1,18 @@
-Title: 充值卡折现价值分析
-Date: 2018-08-06 15:58
-Category: 金融与算法
-Tags: 折现,最优化
-Slug: gift-card-discount-value
-Authors: Kevin Chen
+---
+title: 充值卡折现价值分析
+date: 2018-08-06T15:58:11+08:00
+draft: false
+isCJKLanguage: true
+toc: false
+categories:
+- 金融投资
+tags:
+- 折现
+- 最优化
+---
 
 
+## 正文
 
 前几天，媳妇把收到的一条短信转给我，问我值不值，我的第一反应当然是不值，这种预存方式都是欺负不懂时间价值的人玩的把戏。为了说服她，特地手算折现，但是发现，嗯？好像还是挺值的啊。于是就有了这篇文章，把计算的完整思路和代码贴出来。
 

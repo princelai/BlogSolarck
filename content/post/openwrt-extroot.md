@@ -1,9 +1,15 @@
-Title: 用 extroot 为 openwrt 扩充存储空间
-Date: 2014-01-03 01:48
-Category: 玩电脑
-Tags: openwrt
-Slug: openwrt-extroot
-Authors: Kevin Chen
+---
+title: 用extroot为openwrt扩充存储空间
+date: 2014-01-03T01:48:11+08:00
+draft: false
+isCJKLanguage: true
+toc: false
+categories:
+- 电脑与网络
+tags:
+- openwrt
+---
+
 
 水星这款 MW4350r 内存为 128M，运行很多程序都不在话下。但是却只提供了 8M Flash 存储空间，而路由器系统还占了 1.9M，剩下的 5M 空间不足以支持安装很多软件，比如我在安装 python 的时候就报错提示存储空间不足，这确实很郁闷，但幸好 Openwrt 还提供了 extroot 方式来扩展存储，来发挥路由器和 Openwrt 系统的真正实力。
 

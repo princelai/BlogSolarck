@@ -1,10 +1,17 @@
-Title: 为原版Openwrt安装SSR-plus插件
-Date: 2019-10-05 00:01
-Category: 玩电脑
-Tags: shadowsocks, v2ray, openwrt, lede
-Slug: install-ssr-plus
-Authors: Kevin Chen
-
+---
+title: 为原版Openwrt安装SSR-plus插件
+date: 2019-10-05T00:01:11+08:00
+draft: false
+isCJKLanguage: true
+toc: true
+categories:
+- 电脑与网络
+tags:
+- shadowsocks
+- v2ray
+- openwrt
+- lede
+---
 
 
 <br />

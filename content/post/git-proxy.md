@@ -1,10 +1,15 @@
-Title: Git设置代理
-Date: 2019-05-10 16:59
-Category: 玩电脑
-Tags: git, proxy, sock5, ssh
-Slug: git-proxy
-Authors: Kevin Chen
-
+---
+title: Git设置代理
+date: 2019-05-10T16:59:11+08:00
+draft: false
+isCJKLanguage: true
+toc: true
+categories:
+- 电脑与网络
+tags:
+- git
+- 代理
+---
 
 
 ## 查看git连接方式

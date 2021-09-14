@@ -1,10 +1,16 @@
-Title: Python中多项式拟合及外推方法
-Date: 2021-09-06 17:27
-Category: 机器学习
-Tags: numpy, scipy
-Slug: python-poly-fit-and-predict
-Authors: Kevin Chen
-
+---
+title: Python中多项式拟合及外推方法
+date: 2021-09-06T17:27:11+08:00
+draft: false
+isCJKLanguage: true
+toc: false
+categories:
+- 机器学习和算法
+tags:
+- python
+- numpy
+- scipy
+---
 
 曲线拟合是我常用的工具之一，当数据是简单序列数据时，没有必要使用机器学习和深度学习方法，幸好`numpy`和`scipy`都提供了相关的函数可以简单快速调用，下面就是我对两种方法使用记录。
 
@@ -30,7 +36,7 @@ ser = pd.Series([0.911,0.824,0.829,0.825,0.81,0.816,0.84])
 
 </p>
 
-### 使用polyfit拟合
+## 使用polyfit拟合
 
 ```python
 import numpy as np
@@ -53,7 +59,7 @@ p(ser.size + 1)
 
 </p>
 
-### 使用curve_fit拟合
+## 使用curve_fit拟合
 
 当你想自定义多项式时，上面的方法就不太适用，不过`scipy`也提供了相应的方法，首先是要自定义多项式函数：
 
@@ -87,7 +93,7 @@ poly_fit(ser.size + 1,*popt)
 
 
 
-### 画图
+## 画图
 
 最后可以将结果画出来验证
 

@@ -1,9 +1,16 @@
-Title: openwrt 开启 Samba 作为共享中心
-Date: 2014-01-05 01:29
-Category: 玩电脑
-Tags: openwrt
-Slug: openwrt-samba
-Authors: Kevin Chen
+---
+title: Openwrt开启Samba作为共享中心
+date: 2014-01-05T01:29:11+08:00
+draft: false
+isCJKLanguage: true
+toc: false
+categories:
+- 电脑与网络
+tags:
+- openwrt
+- samba
+---
+
 
 为 Openwrt 接入一个大 U 盘，不用来作共享中心的话实在没什么用处了，这也是为日后脱机 BT 下载提供一个基础。
 

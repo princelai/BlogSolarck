@@ -1,10 +1,16 @@
-Title: Julia编译Arpack失败的解决办法
-Date: 2019-05-09 17:54
-Category: 玩电脑
-Tags: julia, arpack, gadfly
-Slug: julia-compile-arpack
-Authors: Kevin Chen
-
+---
+title: Julia编译Arpack失败的解决办法
+date: 2019-05-09T17:54:11+08:00
+draft: false
+isCJKLanguage: true
+toc: false
+categories:
+- 机器学习和算法
+tags:
+- julia
+- arpack
+- gadfly
+---
 
 
 

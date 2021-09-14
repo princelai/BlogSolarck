@@ -1,11 +1,15 @@
-Title: python协程中「生产者-消费者」设计模式
-Date: 2021-09-08 16:56
-Category: Python
-Tags: python,asyncio
-Slug: python-async-design-pattern
-Authors: Kevin Chen
-Status: draft
-
+---
+title: Python协程中的设计模式
+date: 2021-09-14T16:56:11+08:00
+draft: false
+isCJKLanguage: true
+toc: false
+categories:
+- 编程
+tags:
+- python
+- asyncio
+---
 
 
 最近写代码需要用到协程相关内容，遂深入研究了下学到不少知识，记录下来希望能帮到需要的你，下面就是我逐步探索的过程。

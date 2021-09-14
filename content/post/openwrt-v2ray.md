@@ -1,10 +1,15 @@
-Title: 一文玩转V2ray 透明代理
-Date: 2020-03-16 02:26
-Category: 玩电脑
-Tags: openwrt,v2ray
-Slug: openwrt-v2ray
-Authors: Kevin Chen
-
+---
+title: 一文玩转V2ray透明代理
+date: 2020-03-16T02:26:11+08:00
+draft: false
+isCJKLanguage: true
+toc: true
+categories:
+- 电脑与网络
+tags:
+- openwrt
+- v2ray
+---
 
 
 <br />

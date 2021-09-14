@@ -3,15 +3,16 @@ title: 从KDE切换到Gnome
 date: 2019-10-26T17:34:11+08:00
 draft: false
 isCJKLanguage: true
+toc: false
 categories:
-- 计算机
+- 电脑与网络
 tags:
 - kde
 - gnome
 - linux
 ---
 
-<br />
+## 正文
 
 在新单位中，经常要用到MysqlBench，这个软件的密码存储使用的是`gnome-keyring`，而且必须使用企业微信这种软件，例如deepin-wxwork，这个软件依赖于`gnome-settings-daemon`。然而我使用的是KDE桌面系统，有轻微洁癖的我很难接受Gnome和KDE共存于系统，在加上KDE有点审美疲劳，就尝试把我的Manjaro KDE换为Gnome桌面。
 

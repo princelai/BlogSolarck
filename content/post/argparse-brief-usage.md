@@ -3,6 +3,7 @@ title: argparse模块简要用法
 date: 2018-01-08T17:41:11+08:00
 draft: false
 isCJKLanguage: true
+toc: true
 categories:
 - 编程
 tags:
@@ -44,7 +45,7 @@ ArgumentParser.add_argument(name or flags...[, action][, nargs][, const][, defau
 -   metavar - 使用消息中参数的名称。
 -   dest - 要添加到由parse_args()返回的对象的属性的名称。
 
-### 1. name or flags
+## 1. name or flags
 
 唯一的必填参数，可以创建位置参数（必填）和可选参数
 
@@ -59,7 +60,7 @@ Out[1]: Namespace(db='mysql', save=None)
 可选参数以`-`或`--`开始，其余的均为位置参数
 大部分情况下，未填的可选参数默认都是`None`,如果有`--`开始的参数，则参数名以后面的字符串命名。
 
-### 2. action
+## 2. action
 
 action用于将命令和动作关联起来，常用的动作有如下几种：
 
@@ -98,7 +99,7 @@ Out[22]: Namespace(arg1=0, arg2=None, arg3=False)
 a3参数其实就是store_true的实现。
 const和default的区别就是当命令给出但是后面未接值时，使用const值，如果命令那个都没有给出，则使用default的值。
 
-### 3. nargs
+## 3. nargs
 
 nargs定义参数后面值的个数，可选值有几种：
 
@@ -120,7 +121,7 @@ Out[3]: Namespace(a1=['a', 'b'], args2=None, args3=['aa', 'bb'])
 
 结果很好理解，?可以配合const使用，其他的可以配合default使用，调用了就是一个列表，使用const或default就是一个值。
 
-### 4. type和metavar
+## 4. type和metavar
 
 这两个参数偶尔能用到，
 
@@ -148,7 +149,7 @@ optional arguments:
 
 metavar仅改变了help说明里的变量名。
 
-### 参考文档
+## 参考文档
 
 1.  [官方文档][1]
 2.  [中文文档][2]

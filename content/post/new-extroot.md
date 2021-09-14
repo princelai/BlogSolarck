@@ -1,9 +1,15 @@
-Title: Openwrt新的Extroot姿势
-Date: 2020-03-15 23:54
-Category: 玩电脑
-Tags: openwrt, extroot
-Slug: new-extroot
-Authors: Kevin Chen
+---
+title: Openwrt新的Extroot姿势
+date: 2020-03-15T23:54:11+08:00
+draft: false
+isCJKLanguage: true
+toc: false
+categories:
+- 电脑与网络
+tags:
+- openwrt
+---
+
 
 <br />
 

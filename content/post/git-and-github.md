@@ -1,11 +1,18 @@
-Title: git 和 github 主要使用方法
-Date: 2018-05-25 17:19
-Category: 玩电脑
-Tags: git, github
-Slug: git-and-github
-Authors: Kevin Chen
+---
+title: git 和 github 主要使用方法
+date: 2018-05-25T17:19:11+08:00
+draft: false
+isCJKLanguage: true
+toc: true
+categories:
+- 电脑与网络
+tags:
+- git
+- github
+---
 
-### ssh 和密钥
+
+## ssh 和密钥
 
 `ssh-keygen -t rsa -b 4096 -C "princelailai@gmail.com"`：生成密钥
 
@@ -13,7 +20,7 @@ Authors: Kevin Chen
 
 `ssh -T git@github.com`：测试密钥是否可以正常登录
 
-### 设置
+## 设置
 
 `git config --list`：列出当前 repo 所有设置
 
@@ -23,13 +30,13 @@ Authors: Kevin Chen
 
 `echo "# mydotfiles" > README.md`：
 
-### 基本操作
+## 基本操作
 
 `git init`：初始化，创建.git 文件夹
 
 `git status`：查看当前工作区/缓存区状态
 
-### 添加和提交
+## 添加和提交
 
 `git add <文件>`：添加文件至缓存区
 
@@ -39,13 +46,13 @@ Authors: Kevin Chen
 
 `git commit --amend "说明"`：替换掉上一次的提交
 
-### 删除文件
+## 删除文件
 
-`git rm <文件>`：从 repo 中删除文件
+`git rm <文件>`：从repo中删除文件
 
-`git rm --cached <文件>`：
+`git rm --cached <文件>`：从暂存区中删除文件
 
-### 恢复
+## 恢复
 
 `git checkout -- <文件>`：撤销文件工作区的修改
 
@@ -53,13 +60,13 @@ Authors: Kevin Chen
 
 `git reset --hard ad93b89`：所有文件退回至指定版本
 
-### 版本和日志
+## 版本和日志
 
 `git log --oneline`:简版 log
 
 `git log --graph`：带合并图形版 log
 
-### 远程仓库
+## 远程仓库
 
 `git remote show origin`：查看远程仓库详情
 
@@ -67,13 +74,13 @@ Authors: Kevin Chen
 
 `git remote add origin git-url`：关联远程和本地仓库
 
-### 远程仓库的提交和拉取
+## 远程仓库的提交和拉取
 
 `git pull origin master`：把远程仓库拉取到本地仓库
 
 `git push origin master`：本地仓库推送至远程仓库，-u 用于第一次关联
 
-### 分支
+## 分支
 
 `git branch`：列出本地分支
 
@@ -87,13 +94,13 @@ Authors: Kevin Chen
 
 `git branch --set-upstream-to=origin/分支 分支`：本地和远程分支关联
 
-### checkout
+## checkout
 
 `git checkout 分支`：切换到指定分支
 
 `git checkout -b 分支`：创建并切换到分支
 
-### 合并
+## 合并
 
 `git merge 分支`：把指定分支合并到当前分支
 

@@ -1,10 +1,15 @@
-Title: 使用Numba为Python提速10+倍
-Date: 2019-05-14 17:15
-Category: 金融与算法
-Tags: python, numba, pandas
-Slug: numba-speedup-python
-Authors: Kevin Chen
-
+---
+title: 使用Numba为Python提速10+倍
+date: 2019-05-14T17:15:11+08:00
+draft: false
+isCJKLanguage: true
+toc: false
+categories:
+- 编程
+tags:
+- python
+- numba
+---
 
 
 
