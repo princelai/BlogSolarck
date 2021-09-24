@@ -3,11 +3,13 @@ title: 家庭出国网络升级（一）：使用trojan-go作为服务端
 date: 2020-10-16T1:18:11+08:00
 draft: false
 isCJKLanguage: true
+toc: true
 categories:
-- 计算机
+- 电脑与网络 
 tags:
 - trojan-go
 - nginx
+- acme.sh
 ---
 
 

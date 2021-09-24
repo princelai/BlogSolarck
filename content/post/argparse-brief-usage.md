@@ -33,7 +33,6 @@ ArgumentParser.add_argument(name or flags...[, action][, nargs][, const][, defau
 每一个参数的含义：
 
 > -   name or flags - 名称或选项字符串列表，例如。foo或-f, --foo。
-
 -   action - 在命令行遇到此参数时要执行的操作的基本类型。
 -   nargs - 应该使用的命令行参数数。
 -   const - 某些动作和nargs选择所需的常量值。

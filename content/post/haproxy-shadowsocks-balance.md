@@ -97,7 +97,7 @@ backend shadowsocks-out
 
 新建一个配置文件` /etc/shadowsocks/Shadowsocks-haproxy.json`，内容如下：
 
-```
+```json
 {
   "server": "127.0.0.1",
   "server_port": 8388,
@@ -117,7 +117,7 @@ backend shadowsocks-out
 ## 启动
 
 首先要启动haproxy服务
-```
+```bash
 systemctl enable haproxy.service
 systemctl start haproxy.service
 ```
@@ -126,7 +126,7 @@ systemctl start haproxy.service
 
 只需要启动一个Shadowsocks服务就可以实现多服务器负载均衡了
 
-```
+```bash
 systemctl enable shadowsocks-libev@Shadowsocks-haproxy.service
 systemctl start shadowsocks-libev@Shadowsocks-haproxy.service
 ```

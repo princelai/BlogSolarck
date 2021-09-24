@@ -4,15 +4,17 @@ date: 2017-11-13T15:55:11+08:00
 draft: false
 isCJKLanguage: true
 categories:
-- 计算机
+- 电脑与网络
 tags:
 - shadowsocks
+- bbr
+- obfs
 ---
 
 近期开会导致墙越来越高，迫不得已升级自建的 ss 服务，由于 shadowsocks 原版已经停更，shadowsocksR 也已经删库，所以就锁定 libev 版本。
 **_注：以下服务器端内容请切换到 root 操作_**
 
-### 1. 升级 Debian
+## 1. 升级 Debian
 
 在升级之前，我需要先把服务器从 Debian 8 升级到 Debian 9，如果不是 Debian 用户，或者不想升级的可以跳过，这一步不影响后续操作，但是部分代码可能需要修改。
 
@@ -45,7 +47,7 @@ vim /etc/apt/sources.list
  apt autoremove
 ```
 
-### 2. 开启 BBR
+## 2. 开启 BBR
 
 使用一键脚本安装并开启 bbr，此步除 OpenVZ 以外的服务器都可以开启，跳过不影响后续内容。
 
@@ -59,7 +61,7 @@ sysctl -p
 lsmod | grep bbr
 ```
 
-### 3. 安装 shadowsocks-libev 和 simple-obfs 混淆
+## 3. 安装 shadowsocks-libev 和 simple-obfs 混淆
 
 需要从 stretch-backports 库中安装，非 Debian 9 用户请参考[文档][1]
 
@@ -69,7 +71,7 @@ apt update
 apt -t stretch-backports install shadowsocks-libev simple-obfs
 ```
 
-### 4. 优化 TCP 网络
+## 4. 优化 TCP 网络
 
 编辑 sysctl 文件，把下面的内容复制过去，
 如果第二步中没有开启 bbr，那么请删除前两行。
@@ -107,7 +109,7 @@ net.ipv4.ip_forward = 1
 sysctl -p
 ```
 
-### 5. 配置服务端
+## 5. 配置服务端
 
 **修改配置**
 
@@ -141,7 +143,7 @@ systemctl start shadowsocks-libev #后台启动
 systemctl enable shadowsocks-libev #开机启动
 ```
 
-### 6. 配置客户端
+## 6. 配置客户端
 
 **Windows**
 
@@ -213,13 +215,13 @@ shadowsocks-qt5 目前功能严重缺失，不建议使用，Linux 平台最好�
 
 [SwitchyOmega][6]是目前 Chome 最好的代理插件，可以在[官网][7]下载最新版本安装。
 
-### 7.Android 客户端配置
+## 7.Android 客户端配置
 
 如果 Android 手机可以访问 Google Play，则可以直接在上面搜 shadowsocks 和 obfs 分别安装后再配置即可。
 
 如果当前手机不能访问 Play，可以在 github releases 上分别下载[shadowsocks-android][8]和[simple-obfs-android][9]，安装后再配置自己的服务端信息。
 
-### 8.socks5 转 http/https
+## 8.socks5 转 http/https
 
 实际使用中，经常会遇到命令行终端或本地程序需要代理，但是他们只支持 http 或 https 协议，所以就需要把 socks5 协议的代理转换协议，以 Archlinux 为例，方法也很简单。
 
@@ -251,7 +253,7 @@ echo https_proxy=127.0.0.1:8118
 echo http_proxy=127.0.0.1:8118
 ```
 
-### 9. 服务器端常用的命令
+## 9. 服务器端常用的命令
 
 ```bash
 #测试ss+obfs是否正常启动

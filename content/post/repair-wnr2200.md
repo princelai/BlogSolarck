@@ -3,8 +3,9 @@ title: 修复变砖的 WNR2200
 date: 2013-12-31T21:51:11+08:00
 draft: false
 isCJKLanguage: true
+toc: false
 categories:
-- 计算机
+- 电脑与网络
 tags:
 - 路由器
 ---

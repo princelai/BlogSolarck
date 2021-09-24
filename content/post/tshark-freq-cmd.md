@@ -12,17 +12,17 @@ tags:
 ---
 
 
-### Wireshark简介
+# Wireshark简介
 
 > Wireshark 是一款免费开源的包分析器。可用于网络排错、网络分析、软件和通讯协议开发以及教学等。tshark是wireshark的cli版本
 
 
 
-### 安装
+# 安装
 
 Archlinux
 
-```
+```bash
 yaourt -Syu wireshark-cli
 ```
 
@@ -30,7 +30,7 @@ yaourt -Syu wireshark-cli
 
 Debian
 
-```
+```bash
 apt-get update
 apt-get install tshark
 ```
@@ -39,39 +39,39 @@ apt-get install tshark
 
 查看权限
 
-```
-$ getcap /usr/bin/dumpcap
+```bash
+getcap /usr/bin/dumpcap
 /usr/bin/dumpcap = cap_net_admin,cap_net_raw+eip
 ```
 
 dumpcap的位置也可能在`/usr/sbin/dumpcap`，如果输出结果不像上面那样，则还需要设置权限
 
-```
+```bash
 # setcap 'CAP_NET_RAW+eip CAP_NET_ADMIN+eip' /usr/sbin/dumpcap
 ```
 
 把用户添加至wireshark用户组
 
 ```
-# gpasswd -a username wireshark
+gpasswd -a username wireshark
 ```
 
 切换至新用户组
 
 ```
-$ newgrp wireshark
+newgrp wireshark
 ```
 
 
 
 
 
-### 查看http请求1
+# 查看http请求1
 
 ```
 tshark -i em1 -n -Y http.request -T fields  -e "ip.src" -e "http.request.method" -e "http.request.uri"
 ```
-#### 参数
+### 参数
 
 `-i`：网络设备名，默认为第一个非环路设备，可用`ip link`或`ifconfig`查看
 
@@ -83,7 +83,7 @@ tshark -i em1 -n -Y http.request -T fields  -e "ip.src" -e "http.request.method"
 
 `-e`：输出Fields的某一字段
 
-#### 输出结果
+### 输出结果
 
 ```
 117.136.0.189   POST    /api/anonymous/notice/new
@@ -102,19 +102,19 @@ tshark -i em1 -n -Y http.request -T fields  -e "ip.src" -e "http.request.method"
 
 
 
-### 查看http请求2
+## 查看http请求2
 
 
 ```
 tshark -i em1 -f 'tcp dst port 80 and src host 111.207.128.226' -R 'http.host and http.request.uri' -T fields  -e http.request.uri -e http.user_agent
 ```
-#### 参数
+### 参数
 
 `-f`：包过滤，使用libpcap filter语法；查看过滤语法，[CaptureFilters](https://wiki.wireshark.org/CaptureFilters)
 
 `-R`：显示过滤，使用Wireshark display filter语法，通常用于后接多个过滤器；查看过滤语法，[DisplayFilters](https://wiki.wireshark.org/DisplayFilters)，[CheatSheet](http://packetlife.net/blog/2008/oct/18/cheat-sheets-tcpdump-and-wireshark/)
 
-#### 输出结果
+### 输出结果
 
 ```
 /api/projectlib/getProvincelist290      okhttp/3.3.1
@@ -135,7 +135,7 @@ tshark -i em1 -f 'tcp dst port 80 and src host 111.207.128.226' -R 'http.host an
 
 
 
-### 查看DNS包
+# 查看DNS包
 
 ```
 tshark -n  -f "dst port 53" -T fields -e dns.qry.name -e dns.resp.addr
@@ -145,7 +145,7 @@ tshark -n  -f "dst port 53" -T fields -e dns.qry.name -e dns.resp.addr
 tshark -n  -f "dst port 53" -T fields -e dns.qry.name -e dns.a
 ```
 
-#### 输出结果
+### 输出结果
 
 ```
 lightcone.jd.com        211.151.10.150,123.126.36.173
@@ -158,18 +158,18 @@ cloud.mongodb.com       18.210.185.2
 
 
 
-### 统计http包
+# 统计http包
 
 ```
 tshark -f "tcp  port 80 or  port 443 and host 58.68.234.140" -n -q -z http,stat, -z http,tree
 ```
-#### 参数
+## 参数
 
 `-q`：只有在抓包结束后才显示结果，通常用于统计
 
 `-z`：统计变量，可以使用`tshark -z help  `查看
 
-#### 输出结果
+### 输出结果
 
 ```
 2249 packets captured

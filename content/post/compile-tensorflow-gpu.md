@@ -3,6 +3,7 @@ title: 编译 Tensorflow 1.10 + CUDA9.2 + MKL
 date: 2018-07-30T18:43:11+08:00
 draft: false
 isCJKLanguage: true
+toc: true
 categories:
 - 机器学习和算法
 tags:
@@ -115,15 +116,15 @@ fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush 
 
 ### 安装显卡相关依赖
 
-```
+```bash
 yaourt -S --needed linux418-nvidia cuda cudnn
 ```
 
 安装好之后你还需要记住 cuDNN 的版本和路径
 
-`yaourt -Ql cudnn |grep libcudnn.so`
 
 ```
+$ yaourt -Ql cudnn |grep libcudnn.so
 cudnn /opt/cuda/lib64/libcudnn.so
 cudnn /opt/cuda/lib64/libcudnn.so.7
 cudnn /opt/cuda/lib64/libcudnn.so.7.1.4
@@ -131,9 +132,9 @@ cudnn /opt/cuda/lib64/libcudnn.so.7.1.4
 
 一般来说 CUDA 和 cuDNN 的动态链接库文件都在同一个路径下，版本的话，自己安装的什么版本心里没点 B 数吗？
 
-`yaourt -Ql cuda |grep libcudart.so`
 
 ```
+$ yaourt -Ql cuda |grep libcudart.so
 cuda /opt/cuda/lib64/libcudart.so
 cuda /opt/cuda/lib64/libcudart.so.9.2
 cuda /opt/cuda/lib64/libcudart.so.9.2.148
@@ -142,9 +143,9 @@ cuda /usr/share/man/man7/libcudart.so.7.gz
 
 你还应该确认 CUDA、cuDNN、Python 的执行文件路径或库文件路径已经加入到了`$PATH`变量中
 
-`echo $PATH`
 
 ```
+$ echo $PATH
 /opt/bin:/opt/cuda/bin:/opt/Anaconda3/bin:/opt/android-sdk/platform-tools:/opt/android-sdk/tools:/opt/android-sdk/tools/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/usr/local/sbin:/usr/local/bin:/usr/bin:/opt/android-sdk/platform-tools:/opt/android-sdk/tools:/opt/android-sdk/tools/bin:/opt/cuda/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
 ```
 
