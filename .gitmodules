@@ -1,3 +1,4 @@
 [submodule "themes/even"]
 	path = themes/even
-	url = git@github.com:princelai/hugo-theme-even.git
+#	url = git@github.com:princelai/hugo-theme-even.git
+	url = https://github.com/princelai/hugo-theme-even.git
