@@ -16,12 +16,13 @@ tags:
 DoH即[DNS over HTTPS](https://zh.wikipedia.org/wiki/DNS_over_HTTPS)，DoT即[DNS over TLS](https://zh.wikipedia.org/wiki/DNS_over_TLS)，均使用SSL/TLS技术加密DNS请求，防止中间人攻击、劫持，提高网络安全性。
 
 下面仅列举一些常用的DoH、DoT地址：
-|  名称   |                                DoH                                |       DoT       |
-| :-----: | :---------------------------------------------------------------: | :-------------: |
-|  阿里   | https://223.5.5.5/dns-query</br> https://dns.alidns.com/dns-query | dns.alidns.com  |
-|  腾讯   |                     https://doh.pub/dns-query                     |     dot.pub     |
-| google  |                   https://dns.google/dns-query                    |   dns.google    |
-| AdGuard |                 https://dns.adguard.com/dns-query                 | dns.adguard.com |
+
+|  名称   |                               DoH                                |       DoT       |
+| :-----: | :--------------------------------------------------------------: | :-------------: |
+|  阿里   | https://223.5.5.5/dns-query<br> https://dns.alidns.com/dns-query | dns.alidns.com  |
+|  腾讯   |                    https://doh.pub/dns-query                     |     dot.pub     |
+| google  |                   https://dns.google/dns-query                   |   dns.google    |
+| AdGuard |                https://dns.adguard.com/dns-query                 | dns.adguard.com |
 
 更详细的列表内容可以在[国内公共DNS服务器 IP 地址](https://dns.iui.im/)查看
 
