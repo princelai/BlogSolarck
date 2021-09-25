@@ -1,7 +1,7 @@
 ---
 title: "Git Fork Repo Sync From Origin"
-date: 2021-09-25T01:04:26+08:00
-draft: true
+date: 2021-09-26T00:37:26+08:00
+draft: false
 isCJKLanguage: true
 toc: true
 categories:
