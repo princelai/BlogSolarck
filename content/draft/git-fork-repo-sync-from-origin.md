@@ -1,5 +1,5 @@
 ---
-title: "Git Fork Repo Sync From Origin"
+title: "Git与上游项目同步"
 date: 2021-09-26T00:37:26+08:00
 draft: false
 isCJKLanguage: true
