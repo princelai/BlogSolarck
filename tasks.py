@@ -15,4 +15,4 @@ def github(c):
     """Build production version of site"""
     c.run('git add --all')
     c.run('git commit -m {}'.format(CONFIG['commit_message']))
-    c.run('git push origin master')
+    c.run('git push')
