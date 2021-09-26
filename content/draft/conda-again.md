@@ -49,8 +49,46 @@ custom_channels:
 ## 备份和恢复环境
 
 ### pip
-
+```bash
+pip list --format=freeze >! requirements.txt
+```
+```bash
+conda create -n <env_name> python=3.x
+pip install -r requirements.txt
+```
 ### conda
+```bash
+conda env export -f environment.yml
+```
+```bash
+conda create --file environment.yml
+```
+### conda-tree
+```bash
+conda-tree -n oneprice leaves --export >! condatree.txt
+```
+```bash
+conda create -n <env_name> python=3.x --file condatree.txt
+```
+
+## 依赖关系
+### conda-tree
+需要安装`graphviz`
+
+```bash
+conda-tree -n <env_name> deptree --dot > file.dot # <env_name>环境全部依赖关系
+conda-tree depends <package> --dot > file.dot # <package>依赖的包
+conda-tree whoneeds <package> --dot > file.dot # 依赖<package>的包
+```
+```bash
+dot -Tpng file.dot -o tree.png
+```
+```bash
+dot -Tpdf file.dot -o tree.pdf
+```
+### pipdeptree
 
 ## 参考
 [Managing channels](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-channels.html#strict-channel-priority)
+
+[conda-tree](https://github.com/rvalieris/conda-tree)
