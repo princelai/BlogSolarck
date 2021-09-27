@@ -150,6 +150,8 @@ dot -Tpng file.dot -o tree.png
 ```bash
 dot -Tpdf file.dot -o tree.pdf
 ```
+
+#### 依赖图展示
 ![seaborn depends tree](https://chenwrt.com:843/uploads/medium/9c775c05f6c21c1a26d34c4988484d51.png)
 
 ### pipdeptree
