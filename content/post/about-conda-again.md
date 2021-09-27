@@ -14,6 +14,7 @@ tags:
 
 ## condarc配置文件
 一直以来我都是使用virtualenv来管理Python版本，并且写了一个脚本程序用来更新三方包和解决依赖问题，只能说是能用够用，但是并不好用。而我一直没有选择用Conda来管理Python虚拟环境，是由于早期使用的时候没有深入了解，包管理给我的第一印象一样是不智能，比如我使用conda-forge环境安装了一些包和一些依赖，下次update整体虚拟环境的时候Conda就给我全部使用default频道并降级版本，这哪里是升级，明明是降级啊。究其原因就是channels设置的不对，通过这段时间的使用和了解，说说我认为的用Conda创建Python虚拟环境的优点：
+
 - 支持多环境不同Python版本
 - 支持不同CUDA版本的GPU环境
 - 自动解决安装、升级和卸载的依赖关系
@@ -88,6 +89,7 @@ conda create -n <env_name> python=3.x --file condatree.txt
 ## 依赖关系
 ### conda-tree
 conda-tree是一个树状依赖查看工具，功能强大，使用方便。最大的好处是在一个环境里安装了就可以查看其他conda环境的依赖关系，不需要每个环境都安装一遍才能使用。这里只记录一些我常用的命令：
+
 1. \<package\>包的依赖列表
 ```bash
 conda-tree depends <package>
@@ -111,6 +113,7 @@ conda-tree -n <env_name> deptree --full
 #### conda-tree示例
 ```
 $ conda-tree depends -t sqlite --small
+
 sqlite==3.36.0
   ├─ libgcc-ng 11.2.0 [required: >=9.4.0]
   │  ├─ _libgcc_mutex 0.1 [required: 0.1, conda_forge]
@@ -158,6 +161,7 @@ pipdeptree -p <package> -r
 #### pipdeptree示例
 ```
 $ pipdeptree -p numpy -r 
+
 Warning!!! Possibly conflicting dependencies found:
 * pylint==2.10.2
  - mccabe [required: >=0.6,<0.7, installed: ?]
@@ -192,6 +196,7 @@ conda install pytorch torchvision torchaudio cudatoolkit=11.1 -c pytorch -c nvid
 就能创建一个pytorch环境，无需考虑本机CUDA版本。
 
 Conda创建CUDA环境的好处是只要目标系统的Nvidia驱动版本足够，那么可以向下兼容所有CUDA版本，而且不同的虚拟环境可以安装不同版本的CUDA。例如我本机的Nvidia驱动版本是450.80.02，那么我创建的虚拟环境可以是：
+
 - pytorch+CUDA102,
 - pytorch+CUDA111,
 - paddlepaddle+CUDA112,
