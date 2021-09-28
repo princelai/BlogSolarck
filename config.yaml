@@ -1,5 +1,5 @@
-baseurl: https://example.com
-languageCode: zh-cn
+baseurl: https://solarck.com/
+languageCode: zh-CN
 theme: stack
 paginate: 7
 title: Solarck
@@ -12,7 +12,7 @@ googleAnalytics: "UA-1337838-7"
 
 # Theme i18n support
 # Available values: en, fr, id, ja, ko, pt-br, zh-cn, es, de, nl, it
-DefaultContentLanguage: zh-cn
+DefaultContentLanguage: zh-CN
 
 # Set hasCJKLanguage to true if DefaultContentLanguage is in [zh-cn ja ko]
 # This will make .Summary and .WordCount behave correctly for CJK languages.
