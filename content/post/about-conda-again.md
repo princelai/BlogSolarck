@@ -1,6 +1,7 @@
 ---
 title: "再谈Anaconda的使用"
 date: 2021-09-27T15:40:13+08:00
+lastmod: 2021-09-30T18:20:13+08:00
 draft: false
 isCJKLanguage: true
 toc: true
@@ -23,8 +24,9 @@ tags:
 
 以上优点让我彻底抛弃pip+virtualenv的原生环境，解决了我之前日常使用99%的问题或不便，不过想要好用前提还是要先配置正确，下面贴出我的`.condarc`配置文件一一解释：
 
+**编辑文件**
 ```bash
-vim ~/.condarc
+~/.condarc
 ```
 ```apacheconf
 channel_priority: flexible
@@ -60,26 +62,35 @@ custom_channels:
 
 ### pip
 使用传统的pip进行备份和恢复，这里使用`pip list`而不是`pip freeze`是因为conda和pip版本号兼容性问题，下面这种方法输出的格式兼容性更好。
+
+**备份**
 ```bash
 pip list --format=freeze >! requirements.txt
 ```
+**恢复**
 ```bash
 conda create -n <env_name> python=3.x
 pip install -r requirements.txt
 ```
 ### conda
 conda备份就简单明了许多，导出环境，从环境文件创建并安装所有包。
+
+**备份**
 ```bash
 conda env export -f environment.yml
 ```
+**恢复**
 ```bash
 conda create --file environment.yml
 ```
 ### conda-tree
 conda-tree是一个好用的小工具，详细参数可以查看其[项目主页](https://github.com/rvalieris/conda-tree)，最主要的功能是可以输出一个最精简依赖列表，也就是输出依赖树上所有叶子节点和孤包，根据这些包就能自动把全部依赖安装上。
+
+**最小备份**
 ```bash
 conda-tree -n <env_name> leaves --export >! condatree.txt
 ```
+**恢复**
 ```bash
 conda create -n <env_name> python=3.x --file condatree.txt
 ```
@@ -138,20 +149,22 @@ sqlite==3.36.0
 
 当然也可以将树状依赖关系转换成dot格式，最终输出为PDF、SVG或PNG，方便查看。dot转换需要安装graphviz软件，这部分需要自行安装。
 
+**导出为dot**
 ```bash
 conda-tree -n <env_name> deptree --dot > file.dot # <env_name>环境全部依赖关系
 conda-tree depends <package> --dot > file.dot # <package>依赖的包
 conda-tree whoneeds <package> --dot > file.dot # 依赖<package>的包
 ```
+**转换为PNG**
 ```bash
 dot -Tpng file.dot -o tree.png
 ```
-或
+**转换为PDF**
 ```bash
 dot -Tpdf file.dot -o tree.pdf
 ```
 
-#### 依赖图展示
+**依赖图展示**
 ![seaborn depends tree](https://chenwrt.com:843/uploads/medium/9c775c05f6c21c1a26d34c4988484d51.png)
 
 ### pipdeptree
