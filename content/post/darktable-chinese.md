@@ -1,7 +1,7 @@
 ---
-title: darktable中文
-date: 2021-09-09T15:31:11+08:00
-draft: true
+title: darktable中文语言包
+date: 2021-10-18T22:29:11+08:00
+draft: false
 isCJKLanguage: true
 categories:
 - 摄影
@@ -21,7 +21,7 @@ darktable是一款类似Lightroom的全平台图像编辑管理开源软件，�
 首先需要在[darktable项目主页](https://github.com/darktable-org/darktable/tree/master/po)下载你需要的语言文件，比如我需要简体中文对应的文件就是zh_CN.po
 
 ```bash
-wget -o zh_CN.po https://raw.githubusercontent.com/darktable-org/darktable/master/po/zh_CN.po
+wget https://github.com/darktable-org/darktable/raw/master/po/zh_CN.po
 ```
 
 <br>
@@ -39,6 +39,7 @@ msgfmt -o darktable.mo zh_CN.po
 ```bash
 sudo cp darktable.mo /usr/share/locale/zh_CN/LC_MESSAGES
 ```
+![darktable_zh-cn](https://chenwrt.com:843/uploads/small/74fd4cbdfd582927ada8961f9150b7f9@2x.png)
 
 根据我一个月的使用情况来看，安装了中文补丁后，在快速切换某些界面时候会卡住几秒然后自动退出，不过幸好编辑图片的流程顺序参数都存储在相应的xml文件里，数据倒是不会丢失，只不过体验不太好。
 
@@ -50,4 +51,5 @@ sudo cp darktable.mo /usr/share/locale/zh_CN/LC_MESSAGES
 ```bash
 yay -S poedit
 ```
+![poedit](https://chenwrt.com:843/uploads/small/5e1210c513c028069c43bb8e4eaf7dd1@2x.png)
 
